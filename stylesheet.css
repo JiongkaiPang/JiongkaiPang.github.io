@@ -17,7 +17,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 40px); /* 100bh - footer height */
+    height: calc(100vh - 60px); /* 100vh - footer height */
     width: 100%;
 }
 
@@ -28,9 +28,16 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: red; /* Red background for profile section */
     width: 25%;
     height: 100%; /* Ensure full height in the container */
+    
+    border: 1px solid rgba(0,0,0,1);
+}
+
+#profilepicture {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }
 
 /* links section */
@@ -40,9 +47,10 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: green; /* Green background for links section */
     width: 75%;
     height: 100%; /* Ensure full height in the container */
+
+    border: 1px solid rgba(0,0,0,1);
 }
 
 /* Footer */
@@ -53,13 +61,197 @@ body {
     width: 100%;
     text-align: center;
     padding: 10px;
-    background-color: blue;
-    height: 40px; /* Footer height */
-    color: white;
+    background-color: white;
+    height: 60px; /* Footer height */
+    color: black;
 }
 
-#profilepicture {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
+.icons {
+    display: flex;
+    justify-content: center; /* Center the icons horizontally */
+    gap: 24px; /* Space between the icons */
+    margin-bottom: 10px; /* Space between icons and the text */
 }
+
+ul li a {
+    color: black;
+    text-decoration: none; /*no underline */
+
+    border: 1px solid black;
+    border-radius: 50px;
+    display: block;
+
+    padding: 8px 16px 8px 16px;
+
+    transition: 0.5s;
+}
+
+a:hover {
+    background-color: blueviolet;
+}
+
+li + li {
+    margin-top: 16px;
+}
+
+.footer a {
+    font-size: 24px; /* Adjust the size of the icons */
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit the color from the footer */
+}
+
+@media only screen and (max-width = 600px) {
+    main {
+        height: calc(100vh - var(--footer-height));
+        width: 100vw;
+    
+        display: grid;
+    
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+}
+
+@media only screen and (min-width = 601px) {
+
+    main {
+      height: calc(100vh - var(--footer-height));
+      width: 100vw;
+  
+      display: grid;
+  
+      grid-template-columns: 1fr 2fr;
+      grid-template-rows: 1fr;
+  }
+}
+
+
+
+
+
+
+    /* under are icons from css.gg*/
+
+
+    .gg-mail,
+    .gg-mail::after {
+      display: block;
+      box-sizing: border-box;
+      height: 14px;
+      border: 2px solid;
+    }
+    .gg-mail {
+      overflow: hidden;
+      transform: scale(var(--ggs, 1));
+      position: relative;
+      width: 18px;
+      border-radius: 2px;
+    }
+    .gg-mail::after {
+      content: "";
+      position: absolute;
+      border-radius: 3px;
+      width: 14px;
+      transform: rotate(-45deg);
+      bottom: 3px;
+      left: 0;
+    }
+
+.gg-instagram {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    border-radius: 4px;
+    width: 20px;
+    height: 20px;
+  }
+  .gg-instagram::after,
+  .gg-instagram::before {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+  }
+  .gg-instagram::after {
+    border: 2px solid;
+    left: 3px;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 3px;
+  }
+  .gg-instagram::before {
+    border-radius: 3px;
+    width: 2px;
+    height: 2px;
+    background: currentColor;
+    right: 1px;
+    top: 1px;
+  }
+
+  .gg-linkedin {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs, 1));
+    width: 20px;
+    height: 20px;
+    border: 2px solid currentColor;
+    border-radius: 4px;
+  }
+  
+  .gg-linkedin::before,
+  .gg-linkedin::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    background: currentColor;
+  }
+  
+  .gg-linkedin::before {
+    width: 3px;
+    height: 8px;
+    top: 6px;
+    left: 4px;
+    border-radius: 1px;
+  }
+  
+  .gg-linkedin::after {
+    width: 7px;
+    height: 5px;
+    top: 6px;
+    right: 4px;
+    border-radius: 1px;
+  }
+  
+  .gg-linkedin::after::before {
+    content: "";
+    display: block;
+    width: 7px;
+    height: 1px;
+    background: currentColor;
+    position: absolute;
+    top: -3px;
+    right: 0;
+  }
+  
+  .gg-linkedin::after::after {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: currentColor;
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    border-radius: 50%;
+  }
+
+ 
+
+    /*above are icons from css.gg*/
+  
