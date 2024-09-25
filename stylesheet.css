@@ -100,30 +100,32 @@ li + li {
     color: inherit; /* Inherit the color from the footer */
 }
 
-@media only screen and (max-width = 600px) {
-    main {
-        height: calc(100vh - var(--footer-height));
-        width: 100vw;
-    
-        display: grid;
-    
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr;
-    }
-}
+@media only screen and (width <= 600px) {
 
-@media only screen and (min-width = 601px) {
+  main {
+    height: calc(100vh - var(--footer-height));
+    width: 100vw;
 
-    main {
-      height: calc(100vh - var(--footer-height));
-      width: 100vw;
-  
-      display: grid;
-  
-      grid-template-columns: 1fr 2fr;
-      grid-template-rows: 1fr;
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
   }
 }
+
+@media only screen and (width > 600px) {
+
+  main {
+    height: calc(100vh - var(--footer-height));
+    width: 100vw;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+  }
+}
+
 
 
 
