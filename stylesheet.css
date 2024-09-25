@@ -1,37 +1,85 @@
-/* Reset */
+/* resetting all to default*/
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  margin: 0;
 }
-
 body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
+}
+ol, ul {
+  list-style: none;
 }
 
-/* container */
-main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px); /* 100vh - footer height */
-    width: 100%;
+:root {
+  --footer-height: 64px;
 }
+
+/* resetting all to default*/
+
+@media only screen and (width <= 600px) {
+
+  main #container {
+    height: calc(100vh - var(--footer-height));
+    width: 100vw;
+
+    display: grid;
+
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+  }
+}
+
+@media only screen and (width > 600px) {
+
+  main #container {
+    height: calc(100vh - var(--footer-height));
+    width: 100vw;
+
+    display: grid;
+
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
+}
+}
+
+main {
+  height: calc(100vh - var(--footer-height)); /* Full height minus footer */
+  width: 100vw; /* Full viewport width */
+  display: flex; /* Flexbox layout */
+  flex-direction: row; /* Row layout (profile and links side by side) */
+}
+
 
 /* profile section */
 .profile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 25%;
-    height: 100%; /* Ensure full height in the container */
-    
-    border: 1px solid rgba(0,0,0,1);
+  flex: 0 0 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+.profile p {
+  max-width: 200px;
 }
 
 #profilepicture {
@@ -42,15 +90,12 @@ main {
 
 /* links section */
 .links {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    width: 75%;
-    height: 100%; /* Ensure full height in the container */
-
-    border: 1px solid rgba(0,0,0,1);
+  flex: 0 0 75%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(0,0,0,0.5);
 }
 
 .links ul {
@@ -61,15 +106,12 @@ main {
 
 /* Footer */
 .footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    padding: 10px;
-    background-color: white;
-    height: 60px; /* Footer height */
-    color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid black;
+  height: var(--footer-height)
 }
 
 .icons {
@@ -100,42 +142,16 @@ li + li {
     margin-top: 16px;
 }
 
+.icon + .icon {
+  margin-left: 24px;
+}
+
 .footer a {
     font-size: 24px; /* Adjust the size of the icons */
     text-decoration: none; /* Remove underline */
     color: inherit; /* Inherit the color from the footer */
 }
 
-
-@media only screen and (width <= 600px) {
-
-  main #container {
-    height: calc(100vh - var(--footer-height));
-    width: 100vw;
-
-    display: grid;
-
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto;
-}
-.profile, .links {
-  width: 100%; /* Ensure each section takes up the full width */
-  text-align: center; /* Center-align the content */
-}
-}
-
-@media only screen and (width > 600px) {
-
-  main #container {
-    height: calc(100vh - var(--footer-height));
-    width: 100vw;
-
-    display: grid;
-
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr;
-}
-}
 
 
     /* under are icons from css.gg*/
