@@ -116,7 +116,11 @@ li + li {
     display: grid;
 
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    grid-template-rows: auto auto;
+}
+.profile, .links {
+  width: 100%; /* Ensure each section takes up the full width */
+  text-align: center; /* Center-align the content */
 }
 }
 
@@ -257,5 +261,4 @@ li + li {
 
  
 
-    /*above are icons from css.gg*/
-  
+    /*above are icons from css.gg*/ 
