@@ -100,9 +100,9 @@ li + li {
     color: inherit; /* Inherit the color from the footer */
 }
 
-@media only screen and (width <= 600px) {
+@media only screen and (width <= 1025px) {
 
-  main {
+  body {
     height: calc(100vh - var(--footer-height));
     width: 100vw;
 
@@ -113,9 +113,9 @@ li + li {
   }
 }
 
-@media only screen and (width > 600px) {
+@media only screen and (width > 1025px) {
 
-  main {
+  body {
     height: calc(100vh - var(--footer-height));
     width: 100vw;
 
