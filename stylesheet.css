@@ -13,7 +13,7 @@ body {
 }
 
 /* container */
-#container {
+main {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,8 +35,8 @@ body {
 }
 
 #profilepicture {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
 }
 
@@ -52,6 +52,12 @@ body {
 
     border: 1px solid rgba(0,0,0,1);
 }
+
+.links ul {
+  list-style: none; /* Remove bullet points */
+  padding-left: 0; /* Remove default padding */
+}
+
 
 /* Footer */
 .footer {
@@ -100,9 +106,10 @@ li + li {
     color: inherit; /* Inherit the color from the footer */
 }
 
-@media only screen and (width <= 1025px) {
 
-  body {
+@media only screen and (max-width: 600px) {
+
+  main #container {
     height: calc(100vh - var(--footer-height));
     width: 100vw;
 
@@ -110,12 +117,12 @@ li + li {
 
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
-  }
+}
 }
 
-@media only screen and (width > 1025px) {
+@media only screen and (min-width: 601px) {
 
-  body {
+  main #container {
     height: calc(100vh - var(--footer-height));
     width: 100vw;
 
@@ -123,13 +130,8 @@ li + li {
 
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
-  }
 }
-
-
-
-
-
+}
 
 
     /* under are icons from css.gg*/
