@@ -35,8 +35,6 @@ ol, ul {
 
 @media only screen and (width <= 600px) {
 
-
-
   main {
     height: calc(100vh - var(--footer-height));
     width: 100vw;
@@ -45,6 +43,7 @@ ol, ul {
 
     grid-template-columns: 1fr;
     grid-template-rows: 1fr;
+    background-color: red;
   }
 }
 
@@ -58,6 +57,7 @@ ol, ul {
 
     grid-template-columns: 1fr 2fr;
     grid-template-rows: 1fr;
+    background-color: green;
   }
 }
 
