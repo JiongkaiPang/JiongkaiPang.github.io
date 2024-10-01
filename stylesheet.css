@@ -31,7 +31,7 @@ ol, ul {
   --footer-height: 64px;
 }
 
-/* resetting all to default*/
+/* adjusting the screen size */
 
 @media only screen and (width <= 600px) {
 
