@@ -364,4 +364,30 @@ button[type="submit"]:hover {
     background-color: rgb(120, 225, 232);
 }
 
+.delete_button {
+  background-color: transparent;
+  font-weight: bold;
+  border: none;
+  color: #FF6B6B;
+  font-size: 0.8em;
+  cursor: pointer;
+  padding: 3px; 
+  margin-right: 10px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.delete_button:hover {
+  background-color: #FF6B6B;
+  color: white;
+}
+
+.delete_button:focus {
+  outline: none;
+}
+
+.delete_button:active {
+  transform: scale(0.95);
+}
+
   /* above are add-link section */
